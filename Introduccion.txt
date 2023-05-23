@@ -1,0 +1,17 @@
+8. Implementar un microservicio para un sistema de gestión de eventos. Debe permitir crear, actualizar, eliminar eventos y consultar por fecha.
+
+[    
+		{
+        	"id": 1,
+        	"description": "Concierto de Rock",
+       		 "capacity": 500,
+        	"startDate": "2023-06-10T19:00:00",
+        	"endDate": "2023-06-10T23:00:00",
+        	"price": 50.99
+    		}
+]
+
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+            LocalDateTime finalDate = LocalDateTime.parse(dateTime, formatter);
+            Evento evento = findForDateUseCase.findForDate(dateTime);

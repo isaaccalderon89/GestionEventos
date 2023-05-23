@@ -1,0 +1,30 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    defer-datasource-schema: true
+    defer-datasource-data: true
+  datasource:
+    url: 'jdbc:h2:mem:test;DB_CLOSE_DELAY=-1'
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+    data:
+      classpath: schema.sql
+
+  application:
+    name: SegundaPruebaInditex
+app:
+  version: 1.0
+
+logging:
+  level:
+    root: INFO
+server:
+  servlet:
+    context-path: /
